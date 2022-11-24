@@ -1,6 +1,6 @@
 class Usuario {
     
-    constructor ( nombre, apellido, libros, mascotas) {
+    constructor ( nombre, apellido, libros[], mascotas) {
     this.nombre = nombre;
     this.apellido = apellido;
     this.libros = [libros];
@@ -25,8 +25,8 @@ class Usuario {
         }
     
 
-    addBook(libro) {
-        libro = {nombreLibro: "nombre", escritor: "autor"}
+    addBook(nombreLibro, escritor) {
+        const libro = {nombre: nombreLibro, autor: escritor}
         this.libros.push (libro);
     }
 
@@ -47,5 +47,4 @@ U.getBookNames();
 
 console.log (user);
 console.log (U.countMascotas());
-//no logre entender como programar bien para que tome a libro como un objeto con dos parametros y estos se entiendan como tal con solo ponerlos 
 console.log (U.getBookNames());
